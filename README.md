@@ -39,7 +39,7 @@ path is encoded in Latin-1 (ISO-8859-1).
 **Image sample** is a digital image of wheat or triticale leaves in a
 seedling growth stage.
 
-**Sample\_name** is a text read from label. Code name of image sample.
+**sample\_name** is a text read from label. Code name of image sample.
 
 **leaf\_area** is a total area in pixels of one extracted leaf from an
 image sample.
