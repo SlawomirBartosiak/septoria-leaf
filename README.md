@@ -3,41 +3,18 @@ Septoria-leaf is a free open source software for measuring the disease percentag
 
 Getting Started
 Requirements:
-Windows 10: 
-Python 3.8.2 with following modules installed:
-opencv-python 4.2.0.32
-imutils 0.5.3
-numpy 1.18.2
-pandas 1.0.3 modules
-pytesseract 0.3.3
-tesseract v5.0.0 - https://github.com/UB-Mannheim/tesseract/wiki, install tesseract, use default path: C:\Program Files\Tesseract-OCR\tesseract.exe. 
+- Windows 10
+- Python 3.8.2 with following modules installed:
+  -opencv-python 4.2.0.32
+  -imutils 0.5.3
+  -numpy 1.18.2
+  -pandas 1.0.3 modules
+  -pytesseract 0.3.3
+-tesseract v5.0.0 - https://github.com/UB-Mannheim/tesseract/wiki, install tesseract, use default path: C:\Program Files\Tesseract-OCR\tesseract.exe. 
 
 Installing:
 Download septoria-leaf.zip and unzip the folder. Make sure that program path is encoded in Latin-1 (ISO-8859-1). 
 
-septoria-leaf/
-|-- slabels.py
-|-- sleaves.py
-|-- object_list.txt
-|-- output
-|   |-- 1-1-1_leafNO_1.jpg
-|   |-- 1-1-1_leafNO_2.jpg
-|   …
-|   |-- diseased_1-1-1_leafNO_1.jpg
-|   |-- diseased_1-1-1_leafNO_1.jpg
-|   …
-|-- labels_output
-|   |-- 1-1-1.jpg
-|   |-- 1-1-2.jpg
-|   …
-|-- input_images
-    |-- image1.jpg
-    |-- image2.jpg
-    …
-
-You may install modules automatically by running:
-python setup.py develop
-in the command line in the directory where setup.py is located.
 Definitions:
 Image sample is a digital image of wheat or triticale leaves in a seedling growth stage.
 Sample_name is a text read from label. Code name of image sample.
@@ -47,8 +24,12 @@ disease_percetage is a ratio of disease_area to leaf_area *100.
 
 Preparation of image samples:
 Leaves in an image sample should be in one piece, using fragmented leaves is not advised because the program will interpret them as a whole leaf. Leaves should not touch each other, otherwise software will interpret them as a single leaf. The suggested colour of background is blue in order to easily extract leaves from image samples. Image sample labels by default should be rectangular approximately 5 cm in width and 1 cm in height with black characters description on a red background.
+
+
 Run the program:
+
 slabels.py – is a small software assisting with the laborious and time consuming image file naming task. The program extracts a text from labels in an image and renames each file. Depending on various factors an image colour reproduction can differ, therefore for optimization of the parameters follow the steps: 
+
 1.	Prepare a list of labels to read in object_list.txt file located in the main directory - septoria-leaf. Each row should contain a single label name formatted in d-d-d manner, where d is a number. By default slabels.py use following whitelist characters: -0123456789.
 1-1-1
 1-1-2
@@ -67,7 +48,9 @@ ang_input = 10  # Rotation angle range default 10 (-10 to 10).
 6.	Run the slabels.py program.
 7.	Output images will be located in the labels_output directory. Unrecognized images will be named as UNRECOGNIZED_<img_name>. If a read file name is doubled or a file label will not match any object in the object_list.txt, the image will be saved as CHECK_NAME_<label_name>.jpg. If settings were optimized user have to manually correct file names. 
 
+
 sleaves.py – the software evaluates diseased area percentage and summarises results in tables. To run the program and optimize the parameters follow the protocol: 
+
 1.	The Sleaves.py program analyses files from the labels_output folder.
 2.	To enable extracted leaves and diseased tissue write, set the save_leaf_im and save_diseased_im variables to True. Files will be located in the output folder.
 save_leaf_im = True  # True/False save an extracted leaf image
