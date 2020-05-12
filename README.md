@@ -83,8 +83,6 @@ diseased_hue_max = 45  # Max diseased HUE, default 45
 Authors
 Sławomir Bartosiak
 
-License
-
 Acknowledgments
 Stack Overflow community.
   
