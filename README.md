@@ -14,6 +14,7 @@ tesseract v5.0.0 - https://github.com/UB-Mannheim/tesseract/wiki, install tesser
 
 Installing:
 Download septoria-leaf.zip and unzip the folder. Make sure that program path is encoded in Latin-1 (ISO-8859-1). 
+
 septoria-leaf/
 |-- slabels.py
 |-- sleaves.py
