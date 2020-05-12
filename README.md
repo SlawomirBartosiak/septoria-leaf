@@ -1,5 +1,5 @@
 Septoria-leaf 
-Septoria-leaf is a free open source software for measuring the disease percentage of leaves infected by Parastagonospora nodorum or Zymoseptoria tritici in a computationally efficient manner. Software automate labels reading from digital images and facilitates septoria disease severity examination. Program analyses digital images, examines the leaves on an image sample (each leaf individually) and summarizes results in the table. Software creates also a pivot table of total leaf area and disease area as pixel sums and average disease percentage of each image sample.   
+Septoria-leaf is a free open source software for measuring the disease percentage of leaves infected by Parastagonospora nodorum or *Zymoseptoria tritici* in a computationally efficient manner. Software automate labels reading from digital images and facilitates septoria disease severity examination. Program analyses digital images, examines the leaves on an image sample (each leaf individually) and summarizes results in the table. Software creates also a pivot table of total leaf area and disease area as pixel sums and average disease percentage of each image sample.   
 
 Getting Started
 Requirements:
